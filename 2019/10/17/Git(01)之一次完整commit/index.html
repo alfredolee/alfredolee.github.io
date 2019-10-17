@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Git(01)之一次完整commit | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. 使用 git 前的配置设置 user.name 和 user.email缺省等同于 local 123$ git config --local user.name [username] # local对某个仓库生效$ git config --global user.name [username] # global对当前用户所有仓库生效(最常用)$ git config --system u">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git(01)之一次完整commit">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;17&#x2F;Git(01)%E4%B9%8B%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4commit&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. 使用 git 前的配置设置 user.name 和 user.email缺省等同于 local 123$ git config --local user.name [username] # local对某个仓库生效$ git config --global user.name [username] # global对当前用户所有仓库生效(最常用)$ git config --system u">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-17T11:51:17.608Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Git(01)之一次完整commit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/17/Git(01)%E4%B9%8B%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4commit/" class="article-date">
+  <time datetime="2019-10-16T22:07:54.539Z" itemprop="datePublished">2019-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Git(01)之一次完整commit
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-使用-git-前的配置"><a href="#1-使用-git-前的配置" class="headerlink" title="1. 使用 git 前的配置"></a>1. 使用 git 前的配置</h2><h3 id="设置-user-name-和-user-email"><a href="#设置-user-name-和-user-email" class="headerlink" title="设置 user.name 和 user.email"></a>设置 user.name 和 user.email</h3><p>缺省等同于 local</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="built_in">local</span> user.name [username] <span class="comment"># local对某个仓库生效</span></span><br><span class="line">$ git config --global user.name [username] <span class="comment"># global对当前用户所有仓库生效(最常用)</span></span><br><span class="line">$ git config --system user.name [username] <span class="comment"># system对系统所有登录用户有效(几乎不用)</span></span><br></pre></td></tr></table></figure>
+
+<p>显示 config 的配置，加–list</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="built_in">local</span> --list</span><br><span class="line">$ git config --global --list</span><br><span class="line">$ git config --system --list</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-git-基本操作"><a href="#2-git-基本操作" class="headerlink" title="2. git 基本操作"></a>2. git 基本操作</h2><h3 id="建立-git-仓库"><a href="#建立-git-仓库" class="headerlink" title="建立 git 仓库"></a>建立 git 仓库</h3><ol>
+<li>把已有的项目纳入 git 管理</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> [project-name]</span><br><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>新建项目使用 git 管理</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init [project-name]</span><br><span class="line">$ <span class="built_in">cd</span> [project-name]</span><br></pre></td></tr></table></figure>
+
+<h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><p>把指定文件放入暂存区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add [filename]</span><br></pre></td></tr></table></figure>
+
+<p><code>filename</code>, 指定文件名称或者文件夹名称，如果暂存所有修改文件，使用<code>git add .</code></p>
+<h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><p>将暂存区的文件放入本地仓库，形成一次 commit</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m [message]</span><br></pre></td></tr></table></figure>
+
+<p><code>message</code>, 此次 commit 的信息注释</p>
+<h2 id="创建一个基本-git-项目"><a href="#创建一个基本-git-项目" class="headerlink" title="创建一个基本 git 项目"></a>创建一个基本 git 项目</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir git-learn</span><br><span class="line">$ <span class="built_in">cd</span> git-learn</span><br><span class="line">$ touch index.html</span><br></pre></td></tr></table></figure>
+
+<p><code>index.html</code> 内容如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>git-learn<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span>关于git的学习笔记<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>git status</code> 查看当前状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</span><br><span class="line"></span><br><span class="line">        index.html</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use <span class="string">"git add"</span> to track)</span><br></pre></td></tr></table></figure>
+
+<p>此时提示我们使用 <code>git add &lt;file&gt;...</code> 去跟踪文件，接下来我们执行 <code>git add index.html</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add index.html</span><br></pre></td></tr></table></figure>
+
+<p>再次执行<code>git status</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">"git rm --cached &lt;file&gt;..."</span> to unstage)</span><br><span class="line"></span><br><span class="line">        new file:   index.html</span><br></pre></td></tr></table></figure>
+
+<p>ok，提示我们已暂存，可以提交 commit 了, 执行 <code>git commit -m &quot;add: index.html&quot;</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"add: index.html"</span></span><br><span class="line">[master (root-commit) a4e0c87] add: index.html</span><br><span class="line"> 1 file changed, 12 insertions(+)</span><br><span class="line"> create mode 100644 index.html</span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>git log</code> 可以查看我们的 commit 历史</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit a4e0c875cb6361635d57a8b3df56e0646cd2a727 (HEAD -&gt; master)</span><br><span class="line">Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">Date:   Thu Oct 17 19:32:23 2019 +0800</span><br><span class="line"></span><br><span class="line">    add: index.html</span><br></pre></td></tr></table></figure>
+
+<p>好了，到此为止，一次完整的 git 提交已经完成。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/17/Git(01)%E4%B9%8B%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4commit/" data-id="ck1uxokr800008wv7h1o8de6d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/10/17/Git(02)%E4%B9%8B%E6%96%87%E4%BB%B6%E9%87%8D%E5%91%BD%E5%90%8D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Git(02)之文件重命名
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/17/Git(06)%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/">Git(07)之修改或合并commit的message</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/Git(05)%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/">Git(06)之分离头指针</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/Git(04)%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/">Git(05)探秘.git目录</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/Git(03)%E4%B9%8B%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2/">Git(03)之查看版本历史</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/Git(02)%E4%B9%8B%E6%96%87%E4%BB%B6%E9%87%8D%E5%91%BD%E5%90%8D/">Git(02)之文件重命名</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+<script src="https://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+ <link rel="stylesheet" href="/fancybox/jquery.fancybox.css"> <script src="/fancybox/jquery.fancybox.pack.js"></script>  <script src="/js/script.js"></script> 
+
+
+  </div>
+</body>
+</html>

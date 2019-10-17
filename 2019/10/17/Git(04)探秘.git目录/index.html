@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Git(05)探秘.git目录 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首先，我们进入到.git目录下面，看一下都有些什么文件 123$ cd .git&#x2F;$ lsCOMMIT_EDITMSG  config  description  gitk.cache  HEAD  hooks  index  info  logs  objects  ORIG_HEAD  refs  1. HEAD 文件HEAD文件, 当前分支名 123456$ cat .&#x2F;.git&#x2F;HEADr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git(05)探秘.git目录">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;17&#x2F;Git(04)%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="首先，我们进入到.git目录下面，看一下都有些什么文件 123$ cd .git&#x2F;$ lsCOMMIT_EDITMSG  config  description  gitk.cache  HEAD  hooks  index  info  logs  objects  ORIG_HEAD  refs  1. HEAD 文件HEAD文件, 当前分支名 123456$ cat .&#x2F;.git&#x2F;HEADr">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-17T15:39:00.403Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Git(04)探秘.git目录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/17/Git(04)%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/" class="article-date">
+  <time datetime="2019-10-17T13:41:40.282Z" itemprop="datePublished">2019-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Git(05)探秘.git目录
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先，我们进入到<code>.git</code>目录下面，看一下都有些什么文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> .git/</span><br><span class="line">$ ls</span><br><span class="line">COMMIT_EDITMSG  config  description  gitk.cache  HEAD  hooks  index  info  logs  objects  ORIG_HEAD  refs</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-HEAD-文件"><a href="#1-HEAD-文件" class="headerlink" title="1. HEAD 文件"></a>1. HEAD 文件</h3><p><code>HEAD文件</code>, 当前分支名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ cat ./.git/HEAD</span><br><span class="line">ref: refs/heads/master</span><br><span class="line">$ git checkout temp</span><br><span class="line">Switched to branch <span class="string">'temp'</span></span><br><span class="line">$ cat ./.git/HEAD</span><br><span class="line">ref: refs/heads/temp</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-config-文件"><a href="#2-config-文件" class="headerlink" title="2. config 文件"></a>2. config 文件</h3><p><code>config 文件</code>, 保存仓库的本地配置。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ cat ./.git/config</span><br><span class="line">[core]</span><br><span class="line">        repositoryformatversion = 0</span><br><span class="line">        filemode = <span class="literal">false</span></span><br><span class="line">        bare = <span class="literal">false</span></span><br><span class="line">        logallrefupdates = <span class="literal">true</span></span><br><span class="line">        symlinks = <span class="literal">false</span></span><br><span class="line">        ignorecase = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>现在我们通过<code>git config user.name &#39;tudou&#39;</code>修改这个仓库的 user.name。再次查看 config 文件:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ cat ./.git/config</span><br><span class="line">[core]</span><br><span class="line">        repositoryformatversion = 0</span><br><span class="line">        filemode = <span class="literal">false</span></span><br><span class="line">        bare = <span class="literal">false</span></span><br><span class="line">        logallrefupdates = <span class="literal">true</span></span><br><span class="line">        symlinks = <span class="literal">false</span></span><br><span class="line">        ignorecase = <span class="literal">true</span></span><br><span class="line">[user]</span><br><span class="line">        name = tudou</span><br></pre></td></tr></table></figure>
+
+<p>同样，我们在 config 文件下面手动删除<code>[user] name = tudou</code>,利用<code>git config --local --list</code>查看本地配置。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="built_in">local</span> --list</span><br><span class="line">core.repositoryformatversion=0</span><br><span class="line">core.filemode=<span class="literal">false</span></span><br><span class="line">core.bare=<span class="literal">false</span></span><br><span class="line">core.logallrefupdates=<span class="literal">true</span></span><br><span class="line">core.symlinks=<span class="literal">false</span></span><br><span class="line">core.ignorecase=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-refs-文件夹"><a href="#3-refs-文件夹" class="headerlink" title="3. refs 文件夹"></a>3. refs 文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ./.git/refs/</span><br><span class="line">$ ls</span><br><span class="line">heads  tags</span><br><span class="line">$ <span class="built_in">cd</span> heads/</span><br><span class="line">$ ls</span><br><span class="line">master  temp  temp2</span><br><span class="line">$ cat master</span><br><span class="line">da9423e7c3d2fdbe4cef305b9d9495e35c087efb</span><br><span class="line">$ cat temp</span><br><span class="line">eccc4cc74a957d965f543147c24ae996e6e9d331</span><br><span class="line">$ cat temp2</span><br><span class="line">eccc4cc74a957d965f543147c24ae996e6e9d331</span><br></pre></td></tr></table></figure>
+
+<p>这一串数字是什么意思呢？其实，就是一次 commit 的指针。想要看看<code>eccc4cc74a957d965f543147c24ae996e6e9d331</code>是个什么类型，可以使用<code>git cat-file -t [id]</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -t eccc4cc74a957d965f543147c24ae996e6e9d331</span><br><span class="line">commit</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-objects-文件夹"><a href="#4-objects-文件夹" class="headerlink" title="4. objects 文件夹"></a>4. objects 文件夹</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ./.git/objects</span><br><span class="line">$ ls</span><br><span class="line">1a  37  a4  ae  af  c9  da  ec  info  pack</span><br><span class="line">$ <span class="built_in">cd</span> 1a</span><br><span class="line">$ ls</span><br><span class="line">3532fec3047ea545a2be930a508068542ee620</span><br><span class="line">$ git cat-file -t 3532fec3047ea545a2be930a508068542ee620</span><br><span class="line">fatal: Not a valid object name 3532fec3047ea545a2be930a508068542ee620</span><br></pre></td></tr></table></figure>
+
+<p>这里我们想查看一下<code>3532fec3047ea545a2be930a508068542ee620</code>的类型，报了错。这里查看文件类型要加上父级文件夹的名字，也就是<code>1a</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -t 1a3532fec3047ea545a2be930a508068542ee620</span><br><span class="line">tree</span><br></pre></td></tr></table></figure>
+
+<p>想要查看<code>1a3532fec3047ea545a2be930a508068542ee620</code>的内容也可以，使用<code>git cat-file -p [id]</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -p 1a3532fec3047ea545a2be930a508068542ee620</span><br><span class="line"></span><br><span class="line">100644 blob af27bc11183a74536b47dda7235dcf4293af6781    git.html</span><br><span class="line">$ git cat-file -t af27bc11183a74536b47dda7235dcf4293af6781</span><br><span class="line">blob</span><br><span class="line">$ git cat-file -p af27bc11183a74536b47dda7235dcf4293af6781</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span> /&gt;</span><br><span class="line">    &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"ie=edge"</span> /&gt;</span><br><span class="line">    &lt;title&gt;git-learn&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">"app"</span>&gt;关于git的学习笔记&lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-commit-tree-blob三个对象之间的关系"><a href="#5-commit-tree-blob三个对象之间的关系" class="headerlink" title="5. commit,tree, blob三个对象之间的关系"></a>5. <code>commit</code>,<code>tree</code>, <code>blob</code>三个对象之间的关系</h3><p>到目前为止, git 中的是三种核心对象<code>commit</code>,<code>tree</code>, <code>blob</code>我们都已经了解到了。那么，它们之间的关系是什么样呢？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit da9423e7c3d2fdbe4cef305b9d9495e35c087efb (HEAD -&gt; master)</span><br><span class="line">Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">Date:   Thu Oct 17 20:53:53 2019 +0800</span><br><span class="line"></span><br><span class="line">    update index.html to git.html</span><br><span class="line"></span><br><span class="line">commit a4e0c875cb6361635d57a8b3df56e0646cd2a727</span><br><span class="line">Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">Date:   Thu Oct 17 19:32:23 2019 +0800</span><br><span class="line"></span><br><span class="line">    add: index.html</span><br></pre></td></tr></table></figure>
+
+<p>我们使用<code>git cat-file -p [id]</code>查看一个 commit 对象下的内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -p a4e0c875cb6361635d57a8b3df56e0646cd2a727</span><br><span class="line">tree aee298ffaceaf0c30aef0d0867ac8db8b6620f05</span><br><span class="line">author alfredolee &lt;alfredolee94@163.com&gt; 1571311943 +0800</span><br><span class="line">committer alfredolee &lt;alfredolee94@163.com&gt; 1571311943 +0800</span><br><span class="line"></span><br><span class="line">add: index.html</span><br></pre></td></tr></table></figure>
+
+<p>我们可以看到，commit 下面包含一个 tree 对象，那我们再来看看 tree 对象下的内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ git cat-file -p aee298ffaceaf0c30aef0d0867ac8db8b6620f05</span><br><span class="line">100644 blob af27bc11183a74536b47dda7235dcf4293af6781    index.html</span><br><span class="line">$ git cat-file -p af27bc11183a74536b47dda7235dcf4293af6781</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span> /&gt;</span><br><span class="line">    &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"ie=edge"</span> /&gt;</span><br><span class="line">    &lt;title&gt;git-learn&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">"app"</span>&gt;关于git的学习笔记&lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>我们可以看到，<code>tree</code>下面包含一个<code>blob</code>对象。到现在我们应该也就能明白了，它们的关系如下:</p>
+<ul>
+<li>一个<code>commit</code>对应一个<code>tree</code></li>
+<li><code>tree</code>对象其实就是一个文件夹，例子中也就是<code>git-learn</code>文件夹</li>
+<li><code>blob</code>对象实际上就是一个文件, 里面存放文件的内容</li>
+<li>另外，git 中<code>blob</code>和文件名无关，只要文件内容一样，blob 就一样</li>
+</ul>
+<p>使用<code>find .git/objects/ -type f</code>我们可以看到所有的对象。三种对象都放在 objects 中，一旦文件内容相同，blob 对象也相同，同时也就达到了共用的关系。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/17/Git(04)%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/" data-id="ck1uxokri00038wv78xshartw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/10/17/Git(05)%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Git(06)之分离头指针
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/17/Git(03)%E4%B9%8B%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Git(03)之查看版本历史</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/17/Git(06)%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/">Git(07)之修改或合并commit的message</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/Git(05)%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/">Git(06)之分离头指针</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/Git(04)%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/">Git(05)探秘.git目录</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/Git(03)%E4%B9%8B%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2/">Git(03)之查看版本历史</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/Git(02)%E4%B9%8B%E6%96%87%E4%BB%B6%E9%87%8D%E5%91%BD%E5%90%8D/">Git(02)之文件重命名</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+<script src="https://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+ <link rel="stylesheet" href="/fancybox/jquery.fancybox.css"> <script src="/fancybox/jquery.fancybox.pack.js"></script>  <script src="/js/script.js"></script> 
+
+
+  </div>
+</body>
+</html>
