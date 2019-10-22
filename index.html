@@ -5,16 +5,16 @@
   
 
   
-  <title>Hexo</title>
+  <title>土土豆豆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="土土豆豆">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en">
+<meta property="og:site_name" content="土土豆豆">
+<meta property="og:locale" content="cn">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="土土豆豆" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -33,7 +33,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">土土豆豆</a>
       </h1>
       
     </div>
@@ -41,29 +41,107 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/">Home</a>
+        <a class="main-nav-link" href="/"
+          >Home</a
+        >
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+        <a class="main-nav-link" href="/archives"
+          >Archives</a
+        >
         
       </nav>
-      <nav id="sub-nav">
+      <!-- <nav id="sub-nav">
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
+      </nav> -->
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
       </div>
     </div>
   </div>
 </header>
+
       <div class="outer">
         <section id="main">
   
-    <article id="post-Git(06)之修改或合并commit的message" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Git命令速查" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/17/Git(06)%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/" class="article-date">
+    <a href="/2019/10/22/Git%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/" class="article-date">
+  <time datetime="2019-10-22T12:31:40.749Z" itemprop="datePublished">2019-10-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/22/Git%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/">Git命令速查</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="设置-user-name-和-user-email"><a href="#设置-user-name-和-user-email" class="headerlink" title="设置 user.name 和 user.email"></a>设置 user.name 和 user.email</h3><p>缺省等同于 local</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="built_in">local</span> user.name [username] <span class="comment"># local对某个仓库生效</span></span><br><span class="line">$ git config --global user.name [username] <span class="comment"># global对当前用户所有仓库生效(最常用)</span></span><br><span class="line">$ git config --system user.name [username] <span class="comment"># system对系统所有登录用户有效(几乎不用)</span></span><br></pre></td></tr></table></figure>
+
+<p>显示 config 的配置，加–list</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="built_in">local</span> --list</span><br><span class="line">$ git config --global --list</span><br><span class="line">$ git config --system --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="gitk"><a href="#gitk" class="headerlink" title="gitk"></a>gitk</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ gitk <span class="comment"># 图形化显示当前分支</span></span><br><span class="line">$ gitk --all <span class="comment"># 包含所有分支</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init <span class="comment"># 项目目录下初始化git</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add &lt;filename&gt; <span class="comment"># 将工作区所有更改保存到暂存区</span></span><br><span class="line">$ git add -u <span class="comment"># 将工作区所有更改保存到暂存区</span></span><br><span class="line">$ git add . <span class="comment"># 将工作区所有更改保存到暂存区</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &lt;message&gt; <span class="comment"># 将暂存区提交为一个commit</span></span><br><span class="line">$ git commit -am &lt;message&gt; <span class="comment"># git add -u 和 git commit -m "&lt;message&gt;" 的合成命令</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="get-remote"><a href="#get-remote" class="headerlink" title="get remote"></a>get remote</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v <span class="comment"># 查看远程仓库</span></span><br><span class="line">$ git remote add &lt;name&gt; &lt;address&gt; <span class="comment"># 查看远程仓库</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push &lt;origin&gt; &lt;master&gt; <span class="comment"># 将本地commit提交到远程分支</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-fetch"><a href="#git-fetch" class="headerlink" title="git fetch"></a>git fetch</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch origin master</span><br></pre></td></tr></table></figure>
+
+<h3 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge origin/master</span><br></pre></td></tr></table></figure>
+
+<h3 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- git <span class="built_in">log</span> --oneline <span class="comment"># 查看单行的简洁历史。</span></span><br><span class="line">- git <span class="built_in">log</span> --all <span class="comment"># 查看所有分支的历史</span></span><br><span class="line">- git <span class="built_in">log</span> --all --graph <span class="comment"># 查看图形化的 log 地址</span></span><br><span class="line">- git <span class="built_in">log</span> --oneline -n4 <span class="comment"># 查看最近的四条简洁历史。</span></span><br><span class="line">- git <span class="built_in">log</span> --oneline --all -n4 --graph <span class="comment"># 查看所有分支最近 4 条单行的图形化历史。</span></span><br><span class="line">- git <span class="built_in">help</span> --web <span class="built_in">log</span> <span class="comment"># 跳转到 git log 的帮助文档网页</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-rm"><a href="#git-rm" class="headerlink" title="git rm"></a>git rm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git mv &lt;filename&gt; &lt;filename&gt; <span class="comment"># 文件重命名</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-rm-1"><a href="#git-rm-1" class="headerlink" title="git rm"></a>git rm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm &lt;filename&gt; <span class="comment"># 正确的删除文件方法</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git stash</span><br><span class="line">$ git stash list <span class="comment"># 查看所有的stash</span></span><br><span class="line">$ git stash apply <span class="comment"># 恢复stash中的代码，不清除stash list</span></span><br><span class="line">$ git stash pop <span class="comment"># 恢复stash中的代码，清除stash list</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -a <span class="comment"># 查看本地分支</span></span><br><span class="line">$ git branch -av <span class="comment"># 查看本地和远端分支</span></span><br><span class="line">$ git branch -b [new branch] &lt;commit or old branch&gt; <span class="comment"># 创建分支</span></span><br><span class="line">$ git branch -d [branch] <span class="comment"># -d, 分支做过更改但是没有merge，无法删除</span></span><br><span class="line">$ git branch -D [branch] <span class="comment"># -D, 强制删除</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git diff <span class="comment"># 比较暂存区和工作区</span></span><br><span class="line">$ git diff -- index.html <span class="comment"># 比较某个文件暂存区和工作区的差异</span></span><br><span class="line">$ git diff --cached <span class="comment"># HEAD和暂存区进行比较</span></span><br><span class="line">$ git diff [commit] [commit]</span><br><span class="line">$ git diff [branch] [branch]</span><br><span class="line">$ git diff [commit] [commit] -- &lt;filename&gt;</span><br><span class="line">$ git diff [branch] [branch] -- &lt;filename&gt;</span><br><span class="line">$ git diff HEAD HEAD^1 <span class="comment"># 和HEAD的父亲相比较</span></span><br><span class="line">$ git diff HEAD HEAD^2 <span class="comment"># 和HEAD父亲的父亲比较</span></span><br><span class="line">$ git diff HEAD HEAD~2 <span class="comment"># 同 git diff HEAD HEAD^2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD <span class="comment"># 暂存区恢复成和HEAD一样</span></span><br><span class="line">$ git reset HEAD -- &lt;filename&gt; <span class="comment"># 将文件的暂存区恢复成和HEAD一样</span></span><br><span class="line">$ git reset --hard &lt;commit id&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="git-checktout"><a href="#git-checktout" class="headerlink" title="git checktout"></a>git checktout</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checktout -- [filename] <span class="comment"># 工作区恢复成暂存区一样</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/22/Git%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/" data-id="ck21uhvj20002asv7g5wad7xl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Git之修改或合并commit的message" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/17/Git%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/" class="article-date">
   <time datetime="2019-10-17T15:28:44.561Z" itemprop="datePublished">2019-10-17</time>
 </a>
     
@@ -75,7 +153,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/17/Git(06)%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/">Git(07)之修改或合并commit的message</a>
+      <a class="article-title" href="/2019/10/17/Git%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/">Git(07)之修改或合并commit的message</a>
     </h1>
   
 
@@ -83,11 +161,67 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="1-修改最近一次-commit-的-message"><a href="#1-修改最近一次-commit-的-message" class="headerlink" title="1. 修改最近一次 commit 的 message"></a>1. 修改最近一次 commit 的 message</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --amend <span class="comment"># 对最近一次的commit的message进行修改</span></span><br></pre></td></tr></table></figure>
+
+<p>出现：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">update index.html to git.html</span><br><span class="line"></span><br><span class="line"><span class="comment"># Please enter the commit message for your changes. Lines starting</span></span><br><span class="line"><span class="comment"># with '#' will be ignored, and an empty message aborts the commit.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Date:      Thu Oct 17 20:53:53 2019 +0800</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># On branch master</span></span><br><span class="line"><span class="comment"># Changes to be committed:</span></span><br><span class="line"><span class="comment">#       renamed:    index.html -&gt; git.html</span></span><br></pre></td></tr></table></figure>
+
+<p>我们把<code>.html</code>都变为<code>.htm</code>,然后保存退出。</p>
+<h3 id="2-修改老旧-commit-的-message"><a href="#2-修改老旧-commit-的-message" class="headerlink" title="2. 修改老旧 commit 的 message"></a>2. 修改老旧 commit 的 message</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit 6bc164498b0c96d2b204067e1fb376a1d4d2f95a (HEAD -&gt; master)</span><br><span class="line">Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">Date:   Thu Oct 17 20:53:53 2019 +0800</span><br><span class="line"></span><br><span class="line">    update index.htm to git.htm</span><br><span class="line"></span><br><span class="line">commit a4e0c875cb6361635d57a8b3df56e0646cd2a727</span><br><span class="line">Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">Date:   Thu Oct 17 19:32:23 2019 +0800</span><br><span class="line"></span><br><span class="line">    add: index.html</span><br></pre></td></tr></table></figure>
+
+<p>上次我们使用<code>git commit --amend</code>修改了最近一次的 commit 的 message，那么假如说<code>dd2ec65f5584d2c11a233e839abc1a300c404fde</code>这个 commit 是一个老旧的，我们就不能使用<code>git commit --amend</code>，这时候就不得不用到<code>git rebase</code>这个命令了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i a4e0c875cb6361635d57a8b3df56e0646cd2a727</span><br></pre></td></tr></table></figure>
+
+<p>这里的<code>a4e0c875cb6361635d57a8b3df56e0646cd2a727</code>是你要修改的 commit 的父 commit 的 id。</p>
+<p>弹出来一个交互式界面：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">pick 6bc1644 update index.htm to git.htm</span><br><span class="line"></span><br><span class="line"><span class="comment"># Rebase a4e0c87..6bc1644 onto a4e0c87 (1 command)</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Commands:</span></span><br><span class="line"><span class="comment"># p, pick &lt;commit&gt; = use commit</span></span><br><span class="line"><span class="comment"># r, reword &lt;commit&gt; = use commit, but edit the commit message</span></span><br><span class="line"><span class="comment"># e, edit &lt;commit&gt; = use commit, but stop for amending</span></span><br><span class="line"><span class="comment"># s, squash &lt;commit&gt; = use commit, but meld into previous commit</span></span><br><span class="line"><span class="comment"># f, fixup &lt;commit&gt; = like "squash", but discard this commit's log message</span></span><br><span class="line"><span class="comment"># x, exec &lt;command&gt; = run command (the rest of the line) using shell</span></span><br><span class="line"><span class="comment"># d, drop &lt;commit&gt; = remove commit</span></span><br><span class="line"><span class="comment"># l, label &lt;label&gt; = label current HEAD with a name</span></span><br><span class="line"><span class="comment"># t, reset &lt;label&gt; = reset HEAD to a label</span></span><br><span class="line"><span class="comment"># m, merge [-C &lt;commit&gt; | -c &lt;commit&gt;] &lt;label&gt; [# &lt;oneline&gt;]</span></span><br><span class="line"><span class="comment"># .       create a merge commit using the original merge commit's</span></span><br><span class="line"><span class="comment"># .       message (or the oneline, if no original merge commit was</span></span><br><span class="line"><span class="comment"># .       specified). Use -c &lt;commit&gt; to reword the commit message.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># These lines can be re-ordered; they are executed from top to bottom.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If you remove a line here THAT COMMIT WILL BE LOST.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#       However, if you remove everything, the rebase will be aborted.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Note that empty commits are commented out</span></span><br></pre></td></tr></table></figure>
+
+<p>我们可以看到第一行的<code>pick 6bc1644 update index.htm to git.htm</code>, 假如们再这个父 commit 之后还有多次 commit，这里会有多个 commit。</p>
+<p>这里我们是要修改<code>6bc1644</code>这个 commit 的 message, 我们使用到下面提示中的<code>reword</code>, 意思是我还需要这个 commit，但是需要修改 message。 默认的<code>pick</code>就是这个 commit 不做任何变化。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reword 6bc1644 update index.htm to git.htm</span><br></pre></td></tr></table></figure>
+
+<p>之后保存退出会弹出另外一个交互式界面:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">update index.htm to git.htm</span><br><span class="line"></span><br><span class="line"><span class="comment"># Please enter the commit message for your changes. Lines starting</span></span><br><span class="line"><span class="comment"># with '#' will be ignored, and an empty message aborts the commit.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Date:      Thu Oct 17 20:53:53 2019 +0800</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># interactive rebase in progress; onto a4e0c87</span></span><br><span class="line"><span class="comment"># Last command done (1 command done):</span></span><br><span class="line"><span class="comment">#    reword 6bc1644 update index.htm to git.htm</span></span><br><span class="line"><span class="comment"># No commands remaining.</span></span><br><span class="line"><span class="comment"># You are currently editing a commit while rebasing branch 'master' on 'a4e0c87'.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Changes to be committed:</span></span><br><span class="line"><span class="comment">#       renamed:    index.html -&gt; git.html</span></span><br></pre></td></tr></table></figure>
+
+<p>之后的步骤就和<code>git commit --amend</code>一样了。</p>
+<h3 id="把连续的几个-commit-合并成一个-conmmit"><a href="#把连续的几个-commit-合并成一个-conmmit" class="headerlink" title="把连续的几个 commit 合并成一个 conmmit"></a>把连续的几个 commit 合并成一个 conmmit</h3><p>为了更好地演示, 我们新生成两次 commit。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -am<span class="string">"修改最近一次commit的message"</span></span><br><span class="line">[master bc4d54c] 修改最近一次commit的message</span><br><span class="line"> 1 file changed, 3 insertions(+)</span><br><span class="line">$ git commit -am<span class="string">"修改老旧commit的message"</span></span><br><span class="line">[master 8eafe4c] 修改老旧commit的message</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">8eafe4c (HEAD -&gt; master) 修改老旧commit的message</span><br><span class="line">bc4d54c 修改最近一次commit的message</span><br><span class="line">07c0da1 update index.html to git.html</span><br><span class="line">a4e0c87 add: index.html</span><br></pre></td></tr></table></figure>
+
+<p>我们提交 commit 之后发现后面的两次提交可以合成一个 commit 为<code>修改commit的message</code>。还是刚才的步骤:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase -i 07c0da1</span><br><span class="line"></span><br><span class="line">pick bc4d54c 修改最近一次commit的message</span><br><span class="line">pick 8eafe4c 修改老旧commit的message</span><br><span class="line"></span><br><span class="line"><span class="comment"># Rebase 07c0da1..8eafe4c onto 07c0da1 (2 commands)</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Commands:</span></span><br><span class="line"><span class="comment"># p, pick &lt;commit&gt; = use commit</span></span><br><span class="line"><span class="comment"># r, reword &lt;commit&gt; = use commit, but edit the commit message</span></span><br><span class="line"><span class="comment"># e, edit &lt;commit&gt; = use commit, but stop for amending</span></span><br><span class="line"><span class="comment"># s, squash &lt;commit&gt; = use commit, but meld into previous commit</span></span><br><span class="line"><span class="comment"># f, fixup &lt;commit&gt; = like "squash", but discard this commit's log message</span></span><br><span class="line"><span class="comment"># x, exec &lt;command&gt; = run command (the rest of the line) using shell</span></span><br><span class="line"><span class="comment"># d, drop &lt;commit&gt; = remove commit</span></span><br><span class="line"><span class="comment"># l, label &lt;label&gt; = label current HEAD with a name</span></span><br><span class="line"><span class="comment"># t, reset &lt;label&gt; = reset HEAD to a label</span></span><br><span class="line"><span class="comment"># m, merge [-C &lt;commit&gt; | -c &lt;commit&gt;] &lt;label&gt; [# &lt;oneline&gt;]</span></span><br><span class="line"><span class="comment"># .       create a merge commit using the original merge commit's</span></span><br><span class="line"><span class="comment"># .       message (or the oneline, if no original merge commit was</span></span><br><span class="line"><span class="comment"># .       specified). Use -c &lt;commit&gt; to reword the commit message.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># These lines can be re-ordered; they are executed from top to bottom.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If you remove a line here THAT COMMIT WILL BE LOST.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#       However, if you remove everything, the rebase will be aborted.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Note that empty commits are commented out</span></span><br></pre></td></tr></table></figure>
+
+<p>我们观察下面一个命令<code>squash</code>，它的意思是还继续使用这个 commit 但是要把它提交到之前的 commit 中去。<code>s</code>是<code>squash</code>的缩写。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pick bc4d54c 修改最近一次commit的message</span><br><span class="line">s 8eafe4c 修改老旧commit的message</span><br></pre></td></tr></table></figure>
+
+<p>保存退出之后出现:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This is a combination of 2 commits.</span></span><br><span class="line"><span class="comment"># This is the 1st commit message:</span></span><br><span class="line"></span><br><span class="line">修改最近一次commit的message</span><br><span class="line"></span><br><span class="line"><span class="comment"># This is the commit message #2:</span></span><br><span class="line"></span><br><span class="line">修改老旧commit的message</span><br><span class="line"></span><br><span class="line"><span class="comment"># Please enter the commit message for your changes. Lines starting</span></span><br><span class="line"><span class="comment"># with '#' will be ignored, and an empty message aborts the commit.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Date:      Tue Oct 22 00:37:54 2019 +0800</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># interactive rebase in progress; onto 07c0da1</span></span><br><span class="line"><span class="comment"># Last commands done (2 commands done):</span></span><br><span class="line"><span class="comment">#    pick bc4d54c 修改最近一次commit的message</span></span><br><span class="line"><span class="comment">#    squash 8eafe4c 修改老旧commit的message</span></span><br><span class="line"><span class="comment"># No commands remaining.</span></span><br><span class="line"><span class="comment"># You are currently rebasing branch 'master' on '07c0da1'.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Changes to be committed:</span></span><br><span class="line"><span class="comment">#       modified:   git.html</span></span><br></pre></td></tr></table></figure>
+
+<p>我们直接再<code># This is a combination of 2 commits.</code>的下一行输入合并完的的 message, 也就是<code>合并两个commit为：修改commit的message</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This is a combination of 2 commits.</span></span><br><span class="line">合并两个commit为：修改commit的message</span><br><span class="line"><span class="comment"># This is the 1st commit message:</span></span><br><span class="line">修改最近一次commit的message</span><br><span class="line"><span class="comment"># This is the commit message #2:</span></span><br><span class="line">修改老旧commit的message</span><br></pre></td></tr></table></figure>
+
+<p>保存退出之后:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase -i 07c0da1</span><br><span class="line">[detached HEAD 1165306] 合并两个commit为：修改commit的message</span><br><span class="line"> Date: Tue Oct 22 00:37:54 2019 +0800</span><br><span class="line"> 1 file changed, 4 insertions(+)</span><br><span class="line">Successfully rebased and updated refs/heads/master.</span><br></pre></td></tr></table></figure>
+
+<h3 id="合并不连续的几次-commit-的-message"><a href="#合并不连续的几次-commit-的-message" class="headerlink" title="合并不连续的几次 commit 的 message"></a>合并不连续的几次 commit 的 message</h3><p>我们新创建一个 commit 为<code>update: index.html</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">1f71658 (HEAD -&gt; master) update: index.html</span><br><span class="line">1165306 合并两个commit为：修改commit的message</span><br><span class="line">07c0da1 update index.html to git.html</span><br><span class="line">a4e0c87 add: index.html</span><br></pre></td></tr></table></figure>
+
+<p>现在我们想把<code>update: index.html</code>和<code>add: index.html</code>两个分支合并为<code>添加: index.html</code>, 同样使用<code>git rebase</code>。</p>
+<p>注意, 这里我们要合并的 commit 的是最一开始的 commit，其没有父 commit，所以我们就继续使用其 commit 的 id, 并且我们需要记住这个 id,后面会用到。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase -i a4e0c87</span><br></pre></td></tr></table></figure>
+
+<p>出现交互界面:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pick 07c0da1 update index.html to git.html</span><br><span class="line">pick 1165306 合并两个commit为：修改commit的message</span><br><span class="line">pick 1f71658 update: index.html</span><br></pre></td></tr></table></figure>
+
+<p>这时候就需要用到刚才的 commitid 了，没有我们就手动给他添加进去。我们需要把<code>1f71658</code>这个 commit 合并，所以我们需要手动变换他的位置。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pick a4e0c87</span><br><span class="line">s 1f71658 update: index.html</span><br><span class="line">pick 07c0da1 update index.html to git.html</span><br><span class="line">pick 1165306 合并两个commit为：修改commit的message</span><br></pre></td></tr></table></figure>
+
+<p>保存退出之后就和合并连续的 commit 一样了，如果交互终端,可以尝试使用``来继续。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This is a combination of 2 commits.</span></span><br><span class="line">添加: index.html</span><br><span class="line"><span class="comment"># This is the 1st commit message:</span></span><br><span class="line">add: index.html</span><br><span class="line"><span class="comment"># This is the commit message #2:</span></span><br><span class="line">update index.html</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/17/Git(06)%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/" data-id="ck1uxokrk00058wv77miy3oox" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/17/Git%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/" data-id="ck21uhvj70003asv734ufdpc7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -97,9 +231,9 @@
 
 
   
-    <article id="post-Git(05)之分离头指针" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Git之分离头指针" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/17/Git(05)%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/" class="article-date">
+    <a href="/2019/10/17/Git%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/" class="article-date">
   <time datetime="2019-10-17T14:50:51.596Z" itemprop="datePublished">2019-10-17</time>
 </a>
     
@@ -111,7 +245,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/17/Git(05)%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/">Git(06)之分离头指针</a>
+      <a class="article-title" href="/2019/10/17/Git%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/">Git(06)之分离头指针</a>
     </h1>
   
 
@@ -145,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/17/Git(05)%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/" data-id="ck1uxokrh00028wv7339l9icg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/17/Git%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/" data-id="ck21uhvj10001asv71cl682e8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -155,9 +289,9 @@
 
 
   
-    <article id="post-Git(04)探秘.git目录" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Git之探秘.git目录" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/17/Git(04)%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/" class="article-date">
+    <a href="/2019/10/17/Git%E4%B9%8B%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/" class="article-date">
   <time datetime="2019-10-17T13:41:40.282Z" itemprop="datePublished">2019-10-17</time>
 </a>
     
@@ -169,7 +303,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/17/Git(04)%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/">Git(05)探秘.git目录</a>
+      <a class="article-title" href="/2019/10/17/Git%E4%B9%8B%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/">Git(05)探秘.git目录</a>
     </h1>
   
 
@@ -226,204 +360,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/17/Git(04)%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/" data-id="ck1uxokri00038wv78xshartw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git(03)之查看版本历史" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/17/Git(03)%E4%B9%8B%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2/" class="article-date">
-  <time datetime="2019-10-17T12:51:41.640Z" itemprop="datePublished">2019-10-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/17/Git(03)%E4%B9%8B%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2/">Git(03)之查看版本历史</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>之前的两小节我们分别完成了两次提交，那么我们现在怎么查看之前的提交历史呢？git 给我们提供了<code>git log</code>命令：</p>
-<h3 id="1-git-log"><a href="#1-git-log" class="headerlink" title="1. git log"></a>1. git log</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit da9423e7c3d2fdbe4cef305b9d9495e35c087efb (HEAD -&gt; master)</span><br><span class="line">Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">Date:   Thu Oct 17 20:53:53 2019 +0800</span><br><span class="line"></span><br><span class="line">    update index.html to git.html</span><br><span class="line"></span><br><span class="line">commit a4e0c875cb6361635d57a8b3df56e0646cd2a727</span><br><span class="line">Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">Date:   Thu Oct 17 19:32:23 2019 +0800</span><br><span class="line"></span><br><span class="line">    add: index.html</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-git-log-–oneline"><a href="#2-git-log-–oneline" class="headerlink" title="2. git log –oneline"></a>2. git log –oneline</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">da9423e (HEAD -&gt; master) update index.html to git.html</span><br><span class="line">a4e0c87 add: index.html</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-git-log-–oneline-1"><a href="#2-git-log-–oneline-1" class="headerlink" title="2. git log –oneline"></a>2. git log –oneline</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --oneline</span><br><span class="line">da9423e (HEAD -&gt; master) update index.html to git.html</span><br><span class="line">a4e0c87 add: index.html</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-git-log-–all"><a href="#3-git-log-–all" class="headerlink" title="3. git log –all"></a>3. git log –all</h3><p><code>-all</code>, 是指查看所有分支的 commit 历史。我们使用<code>git checkout -b temp a4e0c87</code>基于第一次提交新建一个分支。此时，使用<code>git log --all</code>。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b temp a4e0c87</span><br><span class="line">Switched to a new branch <span class="string">'temp'</span></span><br><span class="line">$ git <span class="built_in">log</span> --all</span><br><span class="line">commit da9423e7c3d2fdbe4cef305b9d9495e35c087efb (master)</span><br><span class="line">Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">Date:   Thu Oct 17 20:53:53 2019 +0800</span><br><span class="line"></span><br><span class="line">    update index.html to git.html</span><br><span class="line"></span><br><span class="line">commit a4e0c875cb6361635d57a8b3df56e0646cd2a727 (HEAD -&gt; temp)</span><br><span class="line">Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">Date:   Thu Oct 17 19:32:23 2019 +0800</span><br><span class="line"></span><br><span class="line">    add: index.html</span><br></pre></td></tr></table></figure>
-
-<p>当然有时候我们不想看到所有的 commit, 我们可以使用<code>git log -n1</code>来查看最近一次 commit。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> -n1</span><br><span class="line">commit da9423e7c3d2fdbe4cef305b9d9495e35c087efb (HEAD -&gt; master)</span><br><span class="line">Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">Date:   Thu Oct 17 20:53:53 2019 +0800</span><br><span class="line"></span><br><span class="line">    update index.html to git.html</span><br></pre></td></tr></table></figure>
-
-<p>我们可以看到，在 temp 分支下，我们也看到了 master 分支下的 commit。但是感觉不够明了。</p>
-<h3 id="4-git-log-–all-–graph"><a href="#4-git-log-–all-–graph" class="headerlink" title="4. git log –all –graph"></a>4. git log –all –graph</h3><p><code>--graph</code>, 相比之前，添加了一些图形化的标识使得表现更明了。</p>
-<p>我们在<code>temp</code>分支，做出一个修改，形成一个 commit。在此 commit 的基础上，新建<code>temp2</code>分支。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --all --graph</span><br><span class="line">* commit eccc4cc74a957d965f543147c24ae996e6e9d331 (HEAD -&gt; temp2, temp)</span><br><span class="line">| Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">| Date:   Thu Oct 17 21:23:36 2019 +0800</span><br><span class="line">|</span><br><span class="line">|     change index.html: git to Git</span><br><span class="line">|</span><br><span class="line">| * commit da9423e7c3d2fdbe4cef305b9d9495e35c087efb (master)</span><br><span class="line">|/  Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">|   Date:   Thu Oct 17 20:53:53 2019 +0800</span><br><span class="line">|</span><br><span class="line">|       update index.html to git.html</span><br><span class="line">|</span><br><span class="line">* commit a4e0c875cb6361635d57a8b3df56e0646cd2a727</span><br><span class="line">  Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">  Date:   Thu Oct 17 19:32:23 2019 +0800</span><br><span class="line"></span><br><span class="line">      add: index.html</span><br></pre></td></tr></table></figure>
-
-<p>我们可以看到，最左侧多了一个图形线，并且<code>master</code>分支是落后<code>temp</code>和<code>temp2</code>分支一个 commit, 上面图标很好的表现出来了。</p>
-<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h3><ul>
-<li>git log –oneline 查看单行的简洁历史。</li>
-<li>git log –all 查看所有分支的历史</li>
-<li>git log –all –graph 查看图形化的 log 地址</li>
-<li>git log –oneline -n4 查看最近的四条简洁历史。</li>
-<li>git log –oneline –all -n4 –graph 查看所有分支最近 4 条单行的图形化历史。</li>
-<li>git help –web log 跳转到 git log 的帮助文档网页</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/17/Git(03)%E4%B9%8B%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2/" data-id="ck1uxokrf00018wv7g58mfk5m" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git(02)之文件重命名" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/17/Git(02)%E4%B9%8B%E6%96%87%E4%BB%B6%E9%87%8D%E5%91%BD%E5%90%8D/" class="article-date">
-  <time datetime="2019-10-17T11:54:16.415Z" itemprop="datePublished">2019-10-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/17/Git(02)%E4%B9%8B%E6%96%87%E4%BB%B6%E9%87%8D%E5%91%BD%E5%90%8D/">Git(02)之文件重命名</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>上一节我们完成了一个完整的 commit，此时呢，我不想让他叫做<code>index.html</code>了，下面就来看看如何改名字。</p>
-<h2 id="1-手动改名字，然后-git-add-rm-…"><a href="#1-手动改名字，然后-git-add-rm-…" class="headerlink" title="1. 手动改名字，然后 git add/rm …"></a>1. 手动改名字，然后 git add/rm <file>…</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ mv index.html git.html</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">"git add/rm &lt;file&gt;..."</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line"></span><br><span class="line">        deleted:    index.html</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</span><br><span class="line"></span><br><span class="line">        git.html</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">"git add"</span> and/or <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>执行 <code>git rm index.html</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ git rm index.html</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">"git add/rm &lt;file&gt;..."</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="keyword">in</span> working directory)</span><br><span class="line"></span><br><span class="line">        deleted:    index.html</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</span><br><span class="line"></span><br><span class="line">        git.html</span><br><span class="line"></span><br><span class="line">no changes added to commit (use <span class="string">"git add"</span> and/or <span class="string">"git commit -a"</span>)</span><br></pre></td></tr></table></figure>
-
-<p>执行 <code>git add git.html</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git add git.html</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> to unstage)</span><br><span class="line"></span><br><span class="line">        renamed:    index.html -&gt; git.html</span><br></pre></td></tr></table></figure>
-
-<p>可以看到，git 非常智能的知道了我们是在重新命名。但是呢，重新命名一个文件是在太繁琐了。这时候<code>git mv</code>就来了。</p>
-<h2 id="2-git-mv-…"><a href="#2-git-mv-…" class="headerlink" title="2. git mv …"></a>2. git mv <file>…</h2><p>此时，我们使用<code>git reset --hard</code>把暂存区所有的修改重置。之后再执行<code>git mv</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git mv index.html git.html</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">"git reset HEAD &lt;file&gt;..."</span> to unstage)</span><br><span class="line"></span><br><span class="line">        renamed:    index.html -&gt; git.html</span><br></pre></td></tr></table></figure>
-
-<p>最后，别忘了<code>git commit</code>我们的修改。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"update index.html to git.html"</span></span><br></pre></td></tr></table></figure>
-
-<p>我们可以看到, <code>git mv index.html git.html</code>这一条命令的效果和之前三条效果是一样的。至此，使用 git 重新命名文件也就完成了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/17/Git(02)%E4%B9%8B%E6%96%87%E4%BB%B6%E9%87%8D%E5%91%BD%E5%90%8D/" data-id="ck1uxokrj00048wv700th2wa8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Git(01)之一次完整commit" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/17/Git(01)%E4%B9%8B%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4commit/" class="article-date">
-  <time datetime="2019-10-16T22:07:54.539Z" itemprop="datePublished">2019-10-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/17/Git(01)%E4%B9%8B%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4commit/">Git(01)之一次完整commit</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-使用-git-前的配置"><a href="#1-使用-git-前的配置" class="headerlink" title="1. 使用 git 前的配置"></a>1. 使用 git 前的配置</h2><h3 id="设置-user-name-和-user-email"><a href="#设置-user-name-和-user-email" class="headerlink" title="设置 user.name 和 user.email"></a>设置 user.name 和 user.email</h3><p>缺省等同于 local</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="built_in">local</span> user.name [username] <span class="comment"># local对某个仓库生效</span></span><br><span class="line">$ git config --global user.name [username] <span class="comment"># global对当前用户所有仓库生效(最常用)</span></span><br><span class="line">$ git config --system user.name [username] <span class="comment"># system对系统所有登录用户有效(几乎不用)</span></span><br></pre></td></tr></table></figure>
-
-<p>显示 config 的配置，加–list</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="built_in">local</span> --list</span><br><span class="line">$ git config --global --list</span><br><span class="line">$ git config --system --list</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-git-基本操作"><a href="#2-git-基本操作" class="headerlink" title="2. git 基本操作"></a>2. git 基本操作</h2><h3 id="建立-git-仓库"><a href="#建立-git-仓库" class="headerlink" title="建立 git 仓库"></a>建立 git 仓库</h3><ol>
-<li>把已有的项目纳入 git 管理</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> [project-name]</span><br><span class="line">$ git init</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>新建项目使用 git 管理</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init [project-name]</span><br><span class="line">$ <span class="built_in">cd</span> [project-name]</span><br></pre></td></tr></table></figure>
-
-<h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><p>把指定文件放入暂存区</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add [filename]</span><br></pre></td></tr></table></figure>
-
-<p><code>filename</code>, 指定文件名称或者文件夹名称，如果暂存所有修改文件，使用<code>git add .</code></p>
-<h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><p>将暂存区的文件放入本地仓库，形成一次 commit</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m [message]</span><br></pre></td></tr></table></figure>
-
-<p><code>message</code>, 此次 commit 的信息注释</p>
-<h2 id="创建一个基本-git-项目"><a href="#创建一个基本-git-项目" class="headerlink" title="创建一个基本 git 项目"></a>创建一个基本 git 项目</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir git-learn</span><br><span class="line">$ <span class="built_in">cd</span> git-learn</span><br><span class="line">$ touch index.html</span><br></pre></td></tr></table></figure>
-
-<p><code>index.html</code> 内容如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>git-learn<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span>关于git的学习笔记<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>使用 <code>git status</code> 查看当前状态</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</span><br><span class="line"></span><br><span class="line">        index.html</span><br><span class="line"></span><br><span class="line">nothing added to commit but untracked files present (use <span class="string">"git add"</span> to track)</span><br></pre></td></tr></table></figure>
-
-<p>此时提示我们使用 <code>git add &lt;file&gt;...</code> 去跟踪文件，接下来我们执行 <code>git add index.html</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add index.html</span><br></pre></td></tr></table></figure>
-
-<p>再次执行<code>git status</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">"git rm --cached &lt;file&gt;..."</span> to unstage)</span><br><span class="line"></span><br><span class="line">        new file:   index.html</span><br></pre></td></tr></table></figure>
-
-<p>ok，提示我们已暂存，可以提交 commit 了, 执行 <code>git commit -m &quot;add: index.html&quot;</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"add: index.html"</span></span><br><span class="line">[master (root-commit) a4e0c87] add: index.html</span><br><span class="line"> 1 file changed, 12 insertions(+)</span><br><span class="line"> create mode 100644 index.html</span><br></pre></td></tr></table></figure>
-
-<p>使用 <code>git log</code> 可以查看我们的 commit 历史</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit a4e0c875cb6361635d57a8b3df56e0646cd2a727 (HEAD -&gt; master)</span><br><span class="line">Author: alfredolee &lt;alfredolee94@163.com&gt;</span><br><span class="line">Date:   Thu Oct 17 19:32:23 2019 +0800</span><br><span class="line"></span><br><span class="line">    add: index.html</span><br></pre></td></tr></table></figure>
-
-<p>好了，到此为止，一次完整的 git 提交已经完成。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/17/Git(01)%E4%B9%8B%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4commit/" data-id="ck1uxokr800008wv7h1o8de6d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/17/Git%E4%B9%8B%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/" data-id="ck21uhvit0000asv7banp2y6n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -464,23 +401,19 @@
       <ul>
         
           <li>
-            <a href="/2019/10/17/Git(06)%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/">Git(07)之修改或合并commit的message</a>
+            <a href="/2019/10/22/Git%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/">Git命令速查</a>
           </li>
         
           <li>
-            <a href="/2019/10/17/Git(05)%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/">Git(06)之分离头指针</a>
+            <a href="/2019/10/17/Git%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/">Git(07)之修改或合并commit的message</a>
           </li>
         
           <li>
-            <a href="/2019/10/17/Git(04)%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/">Git(05)探秘.git目录</a>
+            <a href="/2019/10/17/Git%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/">Git(06)之分离头指针</a>
           </li>
         
           <li>
-            <a href="/2019/10/17/Git(03)%E4%B9%8B%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2/">Git(03)之查看版本历史</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/17/Git(02)%E4%B9%8B%E6%96%87%E4%BB%B6%E9%87%8D%E5%91%BD%E5%90%8D/">Git(02)之文件重命名</a>
+            <a href="/2019/10/17/Git%E4%B9%8B%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/">Git(05)探秘.git目录</a>
           </li>
         
       </ul>
@@ -495,7 +428,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
+      &copy; 2019 Alfredo<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

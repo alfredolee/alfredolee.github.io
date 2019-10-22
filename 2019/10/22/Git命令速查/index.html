@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Git命令速查 | 土土豆豆</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="设置 user.name 和 user.email缺省等同于 local 123$ git config --local user.name [username] # local对某个仓库生效$ git config --global user.name [username] # global对当前用户所有仓库生效(最常用)$ git config --system user.name [user">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git命令速查">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;22&#x2F;Git%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5&#x2F;index.html">
+<meta property="og:site_name" content="土土豆豆">
+<meta property="og:description" content="设置 user.name 和 user.email缺省等同于 local 123$ git config --local user.name [username] # local对某个仓库生效$ git config --global user.name [username] # global对当前用户所有仓库生效(最常用)$ git config --system user.name [user">
+<meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2019-10-22T12:44:40.120Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="土土豆豆" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">土土豆豆</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+        <a class="main-nav-link" href="/"
+          >Home</a
+        >
+        
+        <a class="main-nav-link" href="/archives"
+          >Archives</a
+        >
+        
+      </nav>
+      <!-- <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav> -->
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Git命令速查" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/22/Git%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/" class="article-date">
+  <time datetime="2019-10-22T12:31:40.749Z" itemprop="datePublished">2019-10-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Git命令速查
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="设置-user-name-和-user-email"><a href="#设置-user-name-和-user-email" class="headerlink" title="设置 user.name 和 user.email"></a>设置 user.name 和 user.email</h3><p>缺省等同于 local</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="built_in">local</span> user.name [username] <span class="comment"># local对某个仓库生效</span></span><br><span class="line">$ git config --global user.name [username] <span class="comment"># global对当前用户所有仓库生效(最常用)</span></span><br><span class="line">$ git config --system user.name [username] <span class="comment"># system对系统所有登录用户有效(几乎不用)</span></span><br></pre></td></tr></table></figure>
+
+<p>显示 config 的配置，加–list</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="built_in">local</span> --list</span><br><span class="line">$ git config --global --list</span><br><span class="line">$ git config --system --list</span><br></pre></td></tr></table></figure>
+
+<h3 id="gitk"><a href="#gitk" class="headerlink" title="gitk"></a>gitk</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ gitk <span class="comment"># 图形化显示当前分支</span></span><br><span class="line">$ gitk --all <span class="comment"># 包含所有分支</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init <span class="comment"># 项目目录下初始化git</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add &lt;filename&gt; <span class="comment"># 将工作区所有更改保存到暂存区</span></span><br><span class="line">$ git add -u <span class="comment"># 将工作区所有更改保存到暂存区</span></span><br><span class="line">$ git add . <span class="comment"># 将工作区所有更改保存到暂存区</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &lt;message&gt; <span class="comment"># 将暂存区提交为一个commit</span></span><br><span class="line">$ git commit -am &lt;message&gt; <span class="comment"># git add -u 和 git commit -m "&lt;message&gt;" 的合成命令</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="get-remote"><a href="#get-remote" class="headerlink" title="get remote"></a>get remote</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v <span class="comment"># 查看远程仓库</span></span><br><span class="line">$ git remote add &lt;name&gt; &lt;address&gt; <span class="comment"># 查看远程仓库</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push &lt;origin&gt; &lt;master&gt; <span class="comment"># 将本地commit提交到远程分支</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-fetch"><a href="#git-fetch" class="headerlink" title="git fetch"></a>git fetch</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch origin master</span><br></pre></td></tr></table></figure>
+
+<h3 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge origin/master</span><br></pre></td></tr></table></figure>
+
+<h3 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- git <span class="built_in">log</span> --oneline <span class="comment"># 查看单行的简洁历史。</span></span><br><span class="line">- git <span class="built_in">log</span> --all <span class="comment"># 查看所有分支的历史</span></span><br><span class="line">- git <span class="built_in">log</span> --all --graph <span class="comment"># 查看图形化的 log 地址</span></span><br><span class="line">- git <span class="built_in">log</span> --oneline -n4 <span class="comment"># 查看最近的四条简洁历史。</span></span><br><span class="line">- git <span class="built_in">log</span> --oneline --all -n4 --graph <span class="comment"># 查看所有分支最近 4 条单行的图形化历史。</span></span><br><span class="line">- git <span class="built_in">help</span> --web <span class="built_in">log</span> <span class="comment"># 跳转到 git log 的帮助文档网页</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-rm"><a href="#git-rm" class="headerlink" title="git rm"></a>git rm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git mv &lt;filename&gt; &lt;filename&gt; <span class="comment"># 文件重命名</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-rm-1"><a href="#git-rm-1" class="headerlink" title="git rm"></a>git rm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm &lt;filename&gt; <span class="comment"># 正确的删除文件方法</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git stash</span><br><span class="line">$ git stash list <span class="comment"># 查看所有的stash</span></span><br><span class="line">$ git stash apply <span class="comment"># 恢复stash中的代码，不清除stash list</span></span><br><span class="line">$ git stash pop <span class="comment"># 恢复stash中的代码，清除stash list</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -a <span class="comment"># 查看本地分支</span></span><br><span class="line">$ git branch -av <span class="comment"># 查看本地和远端分支</span></span><br><span class="line">$ git branch -b [new branch] &lt;commit or old branch&gt; <span class="comment"># 创建分支</span></span><br><span class="line">$ git branch -d [branch] <span class="comment"># -d, 分支做过更改但是没有merge，无法删除</span></span><br><span class="line">$ git branch -D [branch] <span class="comment"># -D, 强制删除</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git diff <span class="comment"># 比较暂存区和工作区</span></span><br><span class="line">$ git diff -- index.html <span class="comment"># 比较某个文件暂存区和工作区的差异</span></span><br><span class="line">$ git diff --cached <span class="comment"># HEAD和暂存区进行比较</span></span><br><span class="line">$ git diff [commit] [commit]</span><br><span class="line">$ git diff [branch] [branch]</span><br><span class="line">$ git diff [commit] [commit] -- &lt;filename&gt;</span><br><span class="line">$ git diff [branch] [branch] -- &lt;filename&gt;</span><br><span class="line">$ git diff HEAD HEAD^1 <span class="comment"># 和HEAD的父亲相比较</span></span><br><span class="line">$ git diff HEAD HEAD^2 <span class="comment"># 和HEAD父亲的父亲比较</span></span><br><span class="line">$ git diff HEAD HEAD~2 <span class="comment"># 同 git diff HEAD HEAD^2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD <span class="comment"># 暂存区恢复成和HEAD一样</span></span><br><span class="line">$ git reset HEAD -- &lt;filename&gt; <span class="comment"># 将文件的暂存区恢复成和HEAD一样</span></span><br><span class="line">$ git reset --hard &lt;commit id&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="git-checktout"><a href="#git-checktout" class="headerlink" title="git checktout"></a>git checktout</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checktout -- [filename] <span class="comment"># 工作区恢复成暂存区一样</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/22/Git%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/" data-id="ck21uhvj20002asv7g5wad7xl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/17/Git%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Git(07)之修改或合并commit的message</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/22/Git%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/">Git命令速查</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/Git%E4%B9%8B%E4%BF%AE%E6%94%B9%E6%88%96%E5%90%88%E5%B9%B6commit%E7%9A%84message/">Git(07)之修改或合并commit的message</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/Git%E4%B9%8B%E5%88%86%E7%A6%BB%E5%A4%B4%E6%8C%87%E9%92%88/">Git(06)之分离头指针</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/Git%E4%B9%8B%E6%8E%A2%E7%A7%98.git%E7%9B%AE%E5%BD%95/">Git(05)探秘.git目录</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Alfredo<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+<script src="https://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+ <link rel="stylesheet" href="/fancybox/jquery.fancybox.css"> <script src="/fancybox/jquery.fancybox.pack.js"></script>  <script src="/js/script.js"></script> 
+
+
+  </div>
+</body>
+</html>
